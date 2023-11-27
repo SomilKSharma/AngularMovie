@@ -17,6 +17,9 @@ export class MovieComponent {
     if (!movie.voted) {
       movie.voted = true;
       console.log(`Voted for ${movie.title}`);
+    } else {
+      movie.voted = false;
+      console.log(`Unvoted for ${movie.title}`);
     }
   }
 }

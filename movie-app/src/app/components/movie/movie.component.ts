@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
-
+import { movieData } from '../../models/movieData.model';
 @Component({
   selector: 'app-movie',
   templateUrl: './movie.component.html',
-  styleUrls: ['./movie.component.css']
+  styleUrls: ['./movie.component.css'],
 })
 export class MovieComponent {
-  movies = [
-    { title: 'Movie 1', poster: 'assets/images/poster-1.jpg', voted: false },
-    { title: 'Movie 2', poster: 'assets/images/poster-2.jpg', voted: false },
-    { title: 'Movie 3', poster: 'assets/images/poster-3.jpg', voted: false },
-    { title: 'Movie 4', poster: 'assets/images/poster-4.jpeg', voted: false }
-  ];
-
-  // access
+  // get access to movieData instance
+  movie = new movieData();
   vote(movie: any): void {
     if (!movie.voted) {
       movie.voted = true;

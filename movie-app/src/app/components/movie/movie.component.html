@@ -1,5 +1,5 @@
 <div class="movie-container">
-    <div *ngFor="let movie of movies" class="movie-card">
+    <div *ngFor="let movie of movie.movies" class="movie-card">
         <img [src]="movie.poster" alt="{{ movie.title }}" class="movie-poster">
 
         <button (click)="vote(movie)" class="vote-button">{{ movie.voted ? 'Unvote' : 'Vote' }}</button>

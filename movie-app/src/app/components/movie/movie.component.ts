@@ -13,6 +13,7 @@ export class MovieComponent {
     { title: 'Movie 4', poster: 'assets/images/poster-4.jpeg', voted: false }
   ];
 
+  // access
   vote(movie: any): void {
     if (!movie.voted) {
       movie.voted = true;
